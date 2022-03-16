@@ -1,4 +1,7 @@
-# Start of loop
+"""This version includes a print statement, saying how many tickets are still
+available for sale
+Also checks that only a name is added the ticket sales and not the exit symbol.
+"""
 
 # Initialise loop so that it runs at least once
 name = ""
