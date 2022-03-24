@@ -22,12 +22,12 @@ def calc_ticket_price(age):
 
 
 def calc_profit(ticket):
-    WHOLE_SALE_TICKET = 5
     profit = ticket - WHOLE_SALE_TICKET
     return profit
 
 
 # Main routine
+WHOLE_SALE_TICKET = 5
 name = ""
 total = 0
 # Used a while loop for testing purposes

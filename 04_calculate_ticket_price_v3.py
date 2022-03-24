@@ -1,31 +1,33 @@
 """Calculate price based on age - version 2
-Don't need "RETIRED_AGE" constant because it can be inferred
+Don't need "RETIRED_AGE" constant because it can be inferred.
+Changed constants in function to ordinary variables
 """
 
 
 def calc_ticket_price(age):
-    CHILD_AGE = range(12, 16)
-    STANDARD_AGE = range(16, 65)
+    # Ages - anything over standard_age must qualify for retired price
+    child_age = range(12, 16)
+    standard_age = range(16, 65)
 
-    CHILD_PRICE = 7.5
-    STANDARD_PRICE = 10.5
-    RETIRED_PRICE = 6.5
+    child_price = 7.5
+    standard_price = 10.5
+    retired_price = 6.5
 
-    if age in CHILD_AGE:
-        return CHILD_PRICE
-    elif age in STANDARD_AGE:
-        return STANDARD_PRICE
+    if age in child_age:
+        return child_price
+    elif age in standard_age:
+        return standard_price
     else:
-        return RETIRED_PRICE
+        return retired_price
 
 
 def calc_profit(ticket):
-    WHOLE_SALE_TICKET = 5
     profit = ticket - WHOLE_SALE_TICKET
     return profit
 
 
 # Main routine
+WHOLE_SALE_TICKET = 5
 name = ""
 total = 0
 # Used a while loop for testing purposes
