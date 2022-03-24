@@ -4,6 +4,7 @@
 
 # Functions go here
 
+
 # Check that the ticket name is not blank
 def not_blank(question):
     while True:

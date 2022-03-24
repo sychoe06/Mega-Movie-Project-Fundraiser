@@ -5,6 +5,7 @@ So age must be between 12 and 110 for it to be counted as a ticket sale.
 
 # Functions go here
 
+
 # Check that the ticket name is not blank
 def not_blank(question):
     while True:
@@ -15,6 +16,7 @@ def not_blank(question):
             return response  # Otherwise, return the input
 
 
+# Check for valid integer (e.g. for age)
 def number_checker(question):
     number = ""
     while not number:
@@ -31,6 +33,7 @@ def number_checker(question):
 
 # Ask user if they have used the program before and
 # show instructions if necessary
+
 
 # Loop to get ticket details
 name = ""

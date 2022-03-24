@@ -4,6 +4,7 @@
 
 # Functions go here
 
+
 # Check that the ticket name is not blank
 def not_blank(question):
     while True:
@@ -19,6 +20,7 @@ def not_blank(question):
 
 # Ask user if they have used the program before and
 # show instructions if necessary
+
 
 # Loop to get ticket details
 name = ""

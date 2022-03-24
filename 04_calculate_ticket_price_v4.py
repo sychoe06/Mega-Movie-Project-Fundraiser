@@ -26,13 +26,13 @@ def calc_ticket_price(age):
 
 
 def calc_profit(ticket):
-    WHOLE_SALE_TICKET = 5
     profit = ticket - WHOLE_SALE_TICKET
     return profit
 
 
 # Main routine
 # loop for testing purposes
+WHOLE_SALE_TICKET = 5
 total = 0
 test_cases = [["Rangi", 15], ["Manaia", 16], ["Talia", 64], ["Arihi", 65]]
 
