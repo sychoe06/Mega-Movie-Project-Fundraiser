@@ -69,7 +69,7 @@ def collate_order():
             snacks_required = get_choice(check_snacks, valid_yes_no)
 
         if snacks_required == "N":  # but if they don't want any snacks
-            getting_snacks = False  # break the while loop
+            getting_snacks = False  # breaks the while loop
 
         else:
             # Otherwise, for each snack, the generic string checker is called
