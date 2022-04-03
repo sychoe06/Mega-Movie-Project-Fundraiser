@@ -52,7 +52,7 @@ def collate_order():
     valid_yes_no = [["y", "yes"], ["n", "no"]]
 
     # The snack_order list records the complete order for a single user
-    snack_order = []
+    snack_order_list = []
 
     # Maximum number of any snack item which can be ordered
     max_number_of_snacks = 4
@@ -70,7 +70,6 @@ def collate_order():
 
         if snacks_required == "N":  # but if they don't want any snacks
             getting_snacks = False  # break the while loop
-            break
 
         else:
             # Otherwise, for each snack, the generic string checker is called
@@ -83,7 +82,7 @@ def collate_order():
                 snack = split_order(snack)
                 quantity = snack[0]
                 if quantity > max_number_of_snacks:
-                    snack = None
+                    option = None
                     print("Sorry, the maximum number you can order is 4")
                 else:
                     snack = snack[1]
@@ -92,8 +91,8 @@ def collate_order():
                         getting_snacks = False
 
                     elif option is not None:  # Filters out invalid choices
-                        snack_order.append([quantity, option])
-    return snack_order
+                        snack_order_list.append([quantity, option])
+    return snack_order_list
 
 
 # Main routine
