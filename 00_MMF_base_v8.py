@@ -1,5 +1,5 @@
 """Added 06_String_Validator to 00_MMF_base_v7
-
+Added the import re libraries as well.
 """
 # Import statements
 import re
@@ -56,6 +56,7 @@ def collate_order():
     valid_yes_no = [["y", "yes"], ["n", "no"]]
 
     # The snack_order list records the complete order for a single user
+    snack_order_list = []
 
     # Maximum number of any snack item which can be ordered
     max_number_of_snacks = 4
@@ -72,8 +73,7 @@ def collate_order():
             snacks_required = get_choice(check_snacks, valid_yes_no)
 
         if snacks_required == "N":  # but if they don't want any snacks
-            getting_snacks = False  # break the while loop
-            break
+            getting_snacks = False  # breaks the while loop
 
         else:
             # Otherwise, for each snack, the generic string checker is called
@@ -86,7 +86,7 @@ def collate_order():
                 snack = split_order(snack)
                 quantity = snack[0]
                 if quantity > max_number_of_snacks:
-                    snack = None
+                    option = None
                     print("Sorry, the maximum number you can order is 4")
                 else:
                     snack = snack[1]
@@ -95,8 +95,8 @@ def collate_order():
                         getting_snacks = False
 
                     elif option is not None:  # Filters out invalid choices
-                        snack_order.append([quantity, option])
-    return snack_order
+                        snack_order_list.append([quantity, option])
+    return snack_order_list
 
 
 # Check that the ticket name is not blank
@@ -216,9 +216,6 @@ while name != "Xxx" and ticket_count != MAX_TICKETS:
             all_names.append(name)
             all_tickets.append(price_ticket)
 
-        # Check to ensure there are still tickets left
-        max_tickets_checker(MAX_TICKETS, ticket_count)
-
         # Get snacks
         snack_order = collate_order()
 
@@ -230,6 +227,9 @@ while name != "Xxx" and ticket_count != MAX_TICKETS:
                 print(f"\t{item[0]} {item[1]}")
         else:  # Otherwise, print this
             print("No snacks were ordered")
+
+        # Check to ensure there are still tickets left
+        max_tickets_checker(MAX_TICKETS, ticket_count)
 
         # Get payment method (and work out surcharge as necessary)
 

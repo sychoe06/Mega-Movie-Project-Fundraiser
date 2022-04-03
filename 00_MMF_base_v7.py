@@ -2,8 +2,7 @@
 Added lists to hold ticket holder's name and the price paid for their ticket
 Added a dictionary to get data from these 2 new lists
 Added code to append name and ticket price to the new lists (line 140 and 141)
-Added the import re and import pandas libraries (installing pandas package if
-necessary)
+Added the import pandas libraries (installing pandas package if necessary)
 Modified the else statement (line 125-144) under 'while name != "Xxx" and
 ticket_count != MAX_TICKETS:' to improve the flow and readability.
 Added functions to check how many tickets are available and valid ages,
@@ -16,8 +15,6 @@ Added the print details (movie_frame: line 176 and 177) which uses the pandas
 library to create a printable DataFrame based on the dictionary
 """
 # Import statements
-import re
-
 import pandas
 
 # Functions go here
