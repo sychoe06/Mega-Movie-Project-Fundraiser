@@ -25,6 +25,7 @@ snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 # Creating the Snack dictionary with a label and then the list for content
 movie_data_dict = {
     "Name": names,
+    "Ticket": tickets,
     "Popcorn": popcorn,
     "Water": water,
     "Pita Chips": pita_chips,
@@ -76,10 +77,21 @@ print()
 
 # Print details
 movie_frame = pandas.DataFrame(movie_data_dict)
-# Changes the index to reference
-movie_frame = movie_frame.set_index("Name")
+movie_frame = movie_frame.set_index("Name")  # Changes the index to reference
 
-# Cre
+# Create column called 'Sub Total'
+# contains price for ticket and snacks
+movie_frame["Sub Total"] = \
+    movie_frame["Ticket"] + \
+    movie_frame["Popcorn"] * price_dict["Popcorn"] + \
+    movie_frame["Water"] * price_dict["Water"] + \
+    movie_frame["Pita Chips"] * price_dict["Pita Chips"] + \
+    movie_frame["M&Ms"] * price_dict["M&Ms"] + \
+    movie_frame["Orange Juice"] * price_dict["Orange Juice"]
+
+# Shorten column names
+movie_frame = movie_frame.rename(columns={"Orange Juice": "OJ",
+                                          "Pita Chips": "Chips"})
 
 # the names rather than an actual index number
 print(movie_frame)
