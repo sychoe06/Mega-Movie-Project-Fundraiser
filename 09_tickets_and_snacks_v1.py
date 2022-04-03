@@ -72,9 +72,14 @@ for client_order in test_data:  # Going through each order
             # be added to the end of this list: [2, 5, 0, 1, 3]
             add_list[-1] = amount
 
-# print(snack_lists)
+print()
+
 # Print details
 movie_frame = pandas.DataFrame(movie_data_dict)
-# Changes the index to reference the names rather than an actual index number
+# Changes the index to reference
 movie_frame = movie_frame.set_index("Name")
+
+# Cre
+
+# the names rather than an actual index number
 print(movie_frame)
