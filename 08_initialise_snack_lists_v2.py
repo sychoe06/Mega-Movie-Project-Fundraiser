@@ -69,6 +69,6 @@ print()
 
 # Print details
 movie_frame = pandas.DataFrame(movie_data_dict)
-# Changes the index to reference the names rather than an actual index number
-movie_frame = movie_frame.set_index("Name")
+movie_frame = movie_frame.set_index("Name")  # Changes the index to reference
+# the names rather than an actual index number
 print(movie_frame)
