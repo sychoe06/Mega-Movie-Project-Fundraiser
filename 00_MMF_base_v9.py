@@ -1,5 +1,4 @@
-"""Added 06_String_Validator to 00_MMF_base_v7
-Added the import re libraries as well.
+"""Added 10_surcharge_calculator and 09_tickets_and_snacks_v1 to 00_MMF_base_v8
 """
 # Import statements
 import re
