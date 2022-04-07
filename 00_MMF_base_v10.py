@@ -357,9 +357,6 @@ pandas.set_option("display.max_columns", None)
 # Display numbers to 2 decimal places
 pandas.set_option("precision", 2)
 
-# the names rather than an actual index number
-print(movie_frame)
-
 # For testing purposes, ask user if they want to see all columns
 # If not, just print Ticket, Sub Total, Surcharge and Total columns
 print_all = input("Print all columns? (Y for yes) : ").upper()
@@ -368,8 +365,9 @@ if print_all == "Y":
 else:
     print(movie_frame[["Ticket", "Sub Total", "Surcharge", "Total"]])
 
-print("-" * 40)
+# Calculate ticket profit
+print(f"Ticket profit is ${profit:.2f}")
 
-# Calculate total sales and profit
+print("-" * 40)
 
 # Output data to text file
