@@ -306,7 +306,6 @@ while name != "X" and ticket_count != MAX_TICKETS:
 
     # End of tickets/snacks/payment loop
 
-# Calculate total sales and profit
 print()
 print("-" * 40)
 if ticket_count < MAX_TICKETS:
@@ -361,8 +360,16 @@ pandas.set_option("precision", 2)
 # the names rather than an actual index number
 print(movie_frame)
 
+# For testing purposes, ask user if they want to see all columns
+# If not, just print Ticket, Sub Total, Surcharge and Total columns
+print_all = input("Print all columns? (Y for yes) : ").upper()
+if print_all == "Y":
+    print(movie_frame)
+else:
+    print(movie_frame[["Ticket", "Sub Total", "Surcharge", "Total"]])
+
 print("-" * 40)
 
-# Loop to ask for snacks
+# Calculate total sales and profit
 
 # Output data to text file
