@@ -351,12 +351,6 @@ movie_frame = movie_frame.rename(columns={"Orange Juice": "OJ",
                                           "Pita Chips": "Chips",
                                           "Surcharge Multiplier": "SM"})
 
-# Force all columns to be printed
-pandas.set_option("display.max_columns", None)
-
-# Display numbers to 2 decimal places
-pandas.set_option("precision", 2)
-
 # the names rather than an actual index number
 print(movie_frame)
 
