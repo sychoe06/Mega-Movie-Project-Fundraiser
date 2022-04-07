@@ -228,7 +228,7 @@ name = ""
 ticket_count = 0
 total = 0
 profit = 0
-surcharge_multiplyer = 0
+surcharge_multiplier = 0
 
 # Ask user if they have used the program before and
 # show instructions if necessary
