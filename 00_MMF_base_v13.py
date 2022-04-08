@@ -327,7 +327,7 @@ movie_frame["Snack Cost"] = \
     movie_frame["M&Ms"] * price_dict["M&Ms"] + \
     movie_frame["Orange Juice"] * price_dict["Orange Juice"]
 
-movie_frame["Sub total"] = movie_frame["Snack Cost"] + movie_frame["Ticket"]
+movie_frame["Sub Total"] = movie_frame["Snack Cost"] + movie_frame["Ticket"]
 
 movie_frame["Surcharge"] = \
     movie_frame["Sub Total"] * movie_frame["Surcharge Multiplier"]
