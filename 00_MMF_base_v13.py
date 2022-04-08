@@ -352,6 +352,7 @@ snack_profit = snack_total * SNACK_PROFIT_MARGIN
 summary_data.append(snack_profit)
 
 # Get ticket profit and add to list
+ticket_profit = 
 summary_data.append(ticket_profit)
 
 # Work out total profit and add to list
@@ -375,7 +376,7 @@ print("-" * 60)
 print("*** Ticket/Snack information ***")
 # Refers to an export file - functionality yet to be developed
 print("Note: for full details please see the excel file called zzz\n")
-print(movie_frame[["Ticket", "Snack Cost", "Sub total", "Surcharge", "Total"]])
+print(movie_frame[["Ticket", "Snack Cost", "Sub Total", "Surcharge", "Total"]])
 
 # Printing the summary frame
 print("*** Snack/Profit Summary ***\n")
