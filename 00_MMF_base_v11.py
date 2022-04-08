@@ -1,10 +1,11 @@
-"""Based on 00_MMF_base_v9
-Needed to fix the missing columns - not being printed inside the movie frame
-Also, the money columns need to be rounded tidily. These have been fixed
-using the pandas.set_option methods
-For testing purposes, added an option asking use if they want to print all
-columns
-Change payment method in main routine to while loop (to prevent invalid choice)
+"""Based on 00_MMF_base_v10
+Added a space in between “the summary of the order (for snacks)” and the
+“how do you want to pay” input - line 289
+
+Gives the user the option to print all columns or only the most relevant:
+Name, Ticket cost, Snack cost, Sub Total, Surcharge, Total Cost
+Created new variable name 'Snack cost' - line 350
+and then included it in the modified print statement - line 375
 """
 # Import statements
 import re
@@ -285,6 +286,7 @@ while name != "X" and ticket_count != MAX_TICKETS:
             print("\nThis is a summary of your order:")
             for item in snack_order:
                 print(f"\t{item[0]} {item[1]}")
+            print()  # added space
         else:  # Otherwise, print this
             print("No snacks were ordered")
 
@@ -346,6 +348,8 @@ movie_frame["Surcharge"] = \
 
 movie_frame["Total"] = movie_frame["Sub Total"] + movie_frame["Surcharge"]
 
+movie_frame["Snack Cost"] = movie_frame["Sub Total"] - movie_frame["Ticket"]
+
 # Shorten column names
 movie_frame = movie_frame.rename(columns={"Orange Juice": "OJ",
                                           "Pita Chips": "Chips",
@@ -369,7 +373,8 @@ print_all = input("Print all columns? (Y for yes) : ").upper()
 if print_all == "Y":
     print(movie_frame)
 else:
-    print(movie_frame[["Ticket", "Sub Total", "Surcharge", "Total"]])
+    print(movie_frame[["Ticket", "Snack Cost", "Sub Total", "Surcharge",
+                       "Total"]])
 
 # Calculate ticket profit
 print(f"\nTicket profit is ${profit:.2f}")
