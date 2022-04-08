@@ -368,9 +368,6 @@ pandas.set_option("display.max_columns", 999)
 # Display numbers to 2 decimal places
 pandas.set_option("display.precision", 2)
 
-# the names rather than an actual index number
-print(movie_frame)
-
 print()
 print("-" * 60)
 
