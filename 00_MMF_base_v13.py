@@ -352,7 +352,7 @@ snack_profit = snack_total * SNACK_PROFIT_MARGIN
 summary_data.append(snack_profit)
 
 # Get ticket profit and add to list
-ticket_profit = 
+ticket_profit =
 summary_data.append(ticket_profit)
 
 # Work out total profit and add to list
