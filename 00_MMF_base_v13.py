@@ -90,12 +90,12 @@ def calc_ticket_price(ages):
     retired_price = 6.5
 
     if ages in child_age:
-        ticket_price = child_price
+        ticket = child_price
     elif ages in standard_age:
-        ticket_price = standard_price
+        ticket = standard_price
     else:
-        ticket_price = retired_price
-    return ticket_price
+        ticket = retired_price
+    return ticket
 
 
 # Check for valid integer (e.g. for age)
@@ -215,9 +215,10 @@ MIN_AGE = 12
 MAX_AGE = 110
 name = ""
 ticket_count = 0
-total = 0
 ticket_profit = 0
+ticket_price = 0
 surcharge_multiplier = 0
+total = 0
 
 # Ask user if they have used the program before and
 # show instructions if necessary
@@ -241,12 +242,13 @@ while name != "X" and ticket_count != MAX_TICKETS:
             ticket_count += 1  # added to number of tickets sold
 
             # Calculate ticket price
-            price_ticket = calc_ticket_price(age)
-            print(f"For {name} the price is ${price_ticket:.2f}")
+            ticket_price = calc_ticket_price(age)
+            print(f"For {name} the price is ${ticket_price:.2f}")
 
             # Add name and ticket price to lists
             all_names.append(name)
-            all_tickets.append(price_ticket)
+            all_tickets.append(ticket_price)
+            ticket_profit += (ticket_price - WHOLE_SALE_TICKET)
 
         # Get snacks
         snack_order = collate_order()
@@ -352,7 +354,6 @@ snack_profit = snack_total * SNACK_PROFIT_MARGIN
 summary_data.append(snack_profit)
 
 # Get ticket profit and add to list
-ticket_profit =
 summary_data.append(ticket_profit)
 
 # Work out total profit and add to list
@@ -379,7 +380,7 @@ print("Note: for full details please see the excel file called zzz\n")
 print(movie_frame[["Ticket", "Snack Cost", "Sub Total", "Surcharge", "Total"]])
 
 # Printing the summary frame
-print("*** Snack/Profit Summary ***\n")
+print("\n*** Snack/Profit Summary ***\n")
 print(summary_frame)
 
 print("-" * 60)
