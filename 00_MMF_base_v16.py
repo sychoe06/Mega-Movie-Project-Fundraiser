@@ -1,5 +1,7 @@
 """Based on 00_MMF_base_v15
-
+Added in component 11 (11_instructions_v2) into my base component
+Made sure that my code follows the PEP8 standard by being under 80 characters
+per line.
 """
 # Import statements
 import re
