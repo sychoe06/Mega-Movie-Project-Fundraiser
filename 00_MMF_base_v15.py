@@ -1,5 +1,10 @@
 """Based on 00_MMF_base_v14
 Modified the not_blank(question) function slightly.
+I have made the program generate two csv files, one called ‘ticket_details.csv’
+(includes the individual ticket details) and second one called ‘snack_summary’
+(shows the number of snacks required and the total profit made)
+Output has been formatted so that $ amounts have currency formatting and
+snack totals are integers.
 """
 # Import statements
 import re
