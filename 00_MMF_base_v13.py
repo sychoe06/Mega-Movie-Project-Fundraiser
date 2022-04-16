@@ -1,5 +1,25 @@
 """Based on 00_MMF_base_v12
-
+Created the summary frame - below profit/pricing calculations created in v12
+Then edited the print statement so that it prints only an abbreviated table
+and then the summary frame
+As a result of user testing I added some extra abbreviations to valid_snacks[]
+Removed the question asking if the user wants snacks - from collate_order()
+function
+Added a welcome line. (Note, still have to fill this out with instructions for
+those who haven't used it before)
+Rewrote the output from check_max_tickets() so that it makes more sense
+Removed the ticket profit line from the end of the program and put it into a
+new ticket profit calculation (under the snack profit calculation) in the main
+routine.
+In the main while loop, after calculating the ticket price, calculate ticket
+profit and add to running total
+Removed the whole "while getting_snacks" loop - deleted everything between
+'max_number_of_snacks' and option = ""
+Tidied up the start of the while option != X while loop
+Took out 'snack = None' (was just below 'if quantity > max_number_of_snacks')
+Took out reference to getting_snacks - if option == "X" - and replaced it with
+a break
+Tidied up the 'check_valid_age' function
 """
 # Import statements
 import re
